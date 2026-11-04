@@ -66,7 +66,7 @@ pass "curler image builds"
 # something real (but not internet-dependent) to curl.
 MARKER="dod-1-7-marker-$RANDOM-$RANDOM"
 echo "$MARKER" > "$HTTP_DIR/index.html"
-python3 -m http.server "$HTTP_PORT" --directory "$HTTP_DIR" >/dev/null 2>&1 &
+python -m http.server "$HTTP_PORT" --directory "$HTTP_DIR" >/dev/null 2>&1 &
 HTTP_PID=$!
 
 wait_for_http() {
