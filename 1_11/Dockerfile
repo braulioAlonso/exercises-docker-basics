@@ -2,7 +2,7 @@ FROM amazoncorretto:8-al2
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 RUN ./mvnw package
 
