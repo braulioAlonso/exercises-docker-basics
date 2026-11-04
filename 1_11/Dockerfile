@@ -2,9 +2,9 @@ FROM amazoncorretto:8-al2
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
-RUN ./mvnw package
+RUN chmod +x mvnw && ./mvnw package
 
-CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]
+CMD ["java", "-jar", "target/docker-example-1.1.3.jar"]
 
